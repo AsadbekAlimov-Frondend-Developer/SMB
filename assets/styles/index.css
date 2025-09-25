@@ -11957,7 +11957,10 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
   text-transform: uppercase;
 }
 .about .about-blocks .bottom-item {
-  width: 328px;
+  max-width: 328px;
+}
+.about .about-blocks .bottom-item.box2 {
+  max-width: 356px;
 }
 .about .about-blocks .bottom-item .first-description {
   color: var(--White, #FFF);

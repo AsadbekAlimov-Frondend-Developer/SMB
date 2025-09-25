@@ -12391,7 +12391,12 @@ section {
     }
 
     .bottom-item {
-      width: 328px;
+      max-width: 328px;
+
+      // 
+      &.box2 {
+        max-width: 356px;
+      }
 
       .first-description {
         color: var(--White, #FFF);
@@ -12432,8 +12437,9 @@ section {
         /* 18.2px */
         text-transform: uppercase;
         margin-bottom: 14px;
+
         // 
-        &:last-child{
+        &:last-child {
           margin-bottom: 0;
         }
       }
