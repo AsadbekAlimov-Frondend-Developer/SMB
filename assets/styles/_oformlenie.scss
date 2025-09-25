@@ -1,0 +1,17 @@
+.oformlenie {
+  font-family: "Helvetica Neue", sans-serif;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+  .order {
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    background: #fafafa;
+  }
+}
