@@ -11913,4 +11913,105 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
   font-weight: 400;
   line-height: 160%;
   /* 22.4px */
+}
+
+.about .about-hero {
+  padding: 108px 16px 40px 16px;
+}
+.about .about-hero .hero-title {
+  width: 562px;
+  color: var(--Black, #272727);
+  /* Desktop/H1 */
+  font-family: "Helvetica Neue";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  /* 31.2px */
+  text-transform: uppercase;
+}
+.about .about-blocks .blocks {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.about .about-blocks .box {
+  display: flex;
+  height: 600px;
+  padding: 40px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 0;
+  background: #313133;
+}
+.about .about-blocks .top-item h4 {
+  color: var(--White, #FFF);
+  /* Desktop/H1 */
+  font-family: "Helvetica Neue";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  /* 31.2px */
+  text-transform: uppercase;
+}
+.about .about-blocks .bottom-item {
+  width: 328px;
+}
+.about .about-blocks .bottom-item .first-description {
+  color: var(--White, #FFF);
+  /* Desktop/P1 */
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  /* 18.2px */
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.about .about-blocks .bottom-item .description {
+  color: var(--White, #FFF);
+  /* Desktop/P2 */
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.about .about-blocks .bottom-item .second-box-title {
+  color: var(--White, #FFF);
+  /* Desktop/P1 */
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  /* 18.2px */
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.about .about-blocks .bottom-item .second-box-title:last-child {
+  margin-bottom: 0;
+}
+.about .about-blocks .bottom-item .btn {
+  display: flex;
+  padding: 2px 0;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #FFF;
+  margin-top: 12px;
+  color: #FFF;
+  font-family: "Helvetica Neue";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  border-radius: 0;
+  line-height: 130%;
+  /* 15.6px */
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
 }/*# sourceMappingURL=index.css.map */
