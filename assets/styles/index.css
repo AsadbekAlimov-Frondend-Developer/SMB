@@ -2743,6 +2743,11 @@ section {
   align-items: center;
   gap: 10px;
 }
+.smb-modal-overlay .smb-modal .smb-ok-btn:hover {
+  background: var(--Green, #91BE17);
+  color: #F0F0F0;
+  border-color: transparent;
+}
 @media screen and (max-width: 768px) {
   .smb-modal-overlay .smb-modal .smb-ok-btn {
     width: 90%;
@@ -2857,10 +2862,9 @@ section {
   -moz-appearance: none;
        appearance: none;
   -webkit-appearance: none;
-  width: 24px;
-  height: 24px;
-  border: 2px solid #272727;
-  border-radius: 4px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #272727;
   margin-right: 10px;
   margin-top: 2px;
   flex-shrink: 0;
@@ -2869,13 +2873,13 @@ section {
   background-color: white;
   transition: all 0.2s ease;
 }
-.smb-modal-overlay .smb-modal .smb-modal-content .smb-checkbox-group .smb-checkbox-item input[type=checkbox]::before {
+.smb-modal-overlay .smb-modal .smb-modal-content .smb-checkbox-group .smb-checkbox-item input[type=checkbox]::after {
   content: "";
   position: absolute;
-  left: 6px;
+  left: 4px;
   top: 1px;
-  width: 8px;
-  height: 15px;
+  width: 5px;
+  height: 10px;
   border: solid #272727;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
@@ -11915,11 +11919,22 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
   /* 22.4px */
 }
 
+.big-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
 .about .about-hero {
-  padding: 108px 16px 40px 16px;
+  padding: 108px 16px 102px 16px;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 480px) {
+  .about .about-hero {
+    padding: 80px 8px 80px 8px;
+  }
 }
 .about .about-hero .hero-title {
-  width: 562px;
+  max-width: 562px;
   color: var(--Black, #272727);
   /* Desktop/H1 */
   font-family: "Helvetica Neue";
@@ -11930,10 +11945,29 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
   /* 31.2px */
   text-transform: uppercase;
 }
+@media screen and (max-width: 480px) {
+  .about .about-hero .hero-title {
+    max-width: 322px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 19.6px */
+    text-transform: uppercase;
+  }
+}
 .about .about-blocks .blocks {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 4px;
+}
+@media screen and (max-width: 480px) {
+  .about .about-blocks .blocks {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .about .about-blocks .box {
   display: flex;
@@ -11944,6 +11978,13 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
   align-items: flex-start;
   flex: 1 0 0;
   background: #313133;
+}
+@media screen and (max-width: 480px) {
+  .about .about-blocks .box {
+    width: 100%;
+    padding: 20px;
+    min-height: 600px;
+  }
 }
 .about .about-blocks .top-item h4 {
   color: var(--White, #FFF);
@@ -11956,11 +11997,37 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
   /* 31.2px */
   text-transform: uppercase;
 }
+@media screen and (max-width: 480px) {
+  .about .about-blocks .top-item h4 {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 19.6px */
+    text-transform: uppercase;
+  }
+}
 .about .about-blocks .bottom-item {
   max-width: 328px;
 }
+@media screen and (max-width: 480px) {
+  .about .about-blocks .bottom-item {
+    max-width: 274px;
+  }
+}
 .about .about-blocks .bottom-item.box2 {
   max-width: 356px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 480px) {
+  .about .about-blocks .bottom-item.box2 {
+    max-width: 297px;
+  }
+}
+.about .about-blocks .bottom-item .box-title_item {
+  display: flex;
+  flex-direction: column;
 }
 .about .about-blocks .bottom-item .first-description {
   color: var(--White, #FFF);
@@ -11974,6 +12041,16 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
   text-transform: uppercase;
   margin-bottom: 16px;
 }
+@media screen and (max-width: 480px) {
+  .about .about-blocks .bottom-item .first-description {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 16.8px */
+    text-transform: uppercase;
+  }
+}
 .about .about-blocks .bottom-item .description {
   color: var(--White, #FFF);
   /* Desktop/P2 */
@@ -11982,6 +12059,16 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
+}
+@media screen and (max-width: 480px) {
+  .about .about-blocks .bottom-item .description {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 16.8px */
+    text-transform: uppercase;
+  }
 }
 .about .about-blocks .bottom-item .second-box-title {
   color: var(--White, #FFF);
@@ -11998,6 +12085,16 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
 .about .about-blocks .bottom-item .second-box-title:last-child {
   margin-bottom: 0;
 }
+@media screen and (max-width: 480px) {
+  .about .about-blocks .bottom-item .second-box-title {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 16.8px */
+    text-transform: uppercase;
+  }
+}
 .about .about-blocks .bottom-item .btn {
   display: flex;
   padding: 2px 0;
@@ -12005,7 +12102,7 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
   align-items: center;
   gap: 10px;
   border-bottom: 1px solid #FFF;
-  margin-top: 12px;
+  margin-top: 14px;
   color: #FFF;
   font-family: "Helvetica Neue";
   font-size: 12px;
@@ -12017,4 +12114,15 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
   text-transform: uppercase;
   width: -moz-fit-content;
   width: fit-content;
+}
+@media screen and (max-width: 480px) {
+  .about .about-blocks .bottom-item .btn {
+    margin-top: 12px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    /* 15.6px */
+    text-transform: uppercase;
+  }
 }/*# sourceMappingURL=index.css.map */

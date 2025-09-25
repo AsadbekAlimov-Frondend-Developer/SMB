@@ -1809,6 +1809,13 @@ section {
       gap: 10px;
 
       //
+      &:hover {
+        background: var(--Green, #91BE17);
+        color: #F0F0F0;
+        border-color: transparent;
+      }
+
+      //
       @media screen and (max-width: 768px) {
         width: 90%;
         right: 15px;
@@ -1915,10 +1922,9 @@ section {
           input[type="checkbox"] {
             appearance: none;
             -webkit-appearance: none;
-            width: 24px;
-            height: 24px;
-            border: 2px solid #272727;
-            border-radius: 4px;
+            width: 16px;
+            height: 16px;
+            border: 1px solid #272727;
             margin-right: 10px;
             margin-top: 2px;
             flex-shrink: 0;
@@ -1928,13 +1934,13 @@ section {
             transition: all 0.2s ease;
           }
 
-          input[type="checkbox"]::before {
+          input[type="checkbox"]::after {
             content: "";
             position: absolute;
-            left: 6px;
+            left: 4px;
             top: 1px;
-            width: 8px;
-            height: 15px;
+            width: 5px;
+            height: 10px;
             border: solid #272727;
             border-width: 0 2px 2px 0;
             transform: rotate(45deg);
@@ -12331,16 +12337,24 @@ section {
 }
 
 // =============================================================================== about start================
+.big-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
 .about {
   .about-hero {
-    padding: 108px 16px 40px 16px;
+    padding: 108px 16px 102px 16px;
+    margin-bottom: 0;
 
     // 
-    @media screen and (max-width: 480px) {}
+    @media screen and (max-width: 480px) {
+      padding: 80px 8px 80px 8px;
+    }
 
     // 
     .hero-title {
-      width: 562px;
+      max-width: 562px;
       color: var(--Black, #272727);
 
       /* Desktop/H1 */
@@ -12351,6 +12365,17 @@ section {
       line-height: 130%;
       /* 31.2px */
       text-transform: uppercase;
+
+      // 
+      @media screen and (max-width: 480px) {
+        max-width: 322px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        /* 19.6px */
+        text-transform: uppercase;
+      }
     }
 
     // 
@@ -12361,7 +12386,15 @@ section {
     .blocks {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 4px;
+
+      // 
+      @media screen and (max-width: 480px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
     }
 
     .box {
@@ -12373,6 +12406,13 @@ section {
       align-items: flex-start;
       flex: 1 0 0;
       background: #313133;
+
+      // 
+      @media screen and (max-width: 480px) {
+        width: 100%;
+        padding: 20px;
+        min-height: 600px;
+      }
     }
 
     .top-item {
@@ -12387,15 +12427,42 @@ section {
         line-height: 130%;
         /* 31.2px */
         text-transform: uppercase;
+
+        // 
+        @media screen and (max-width: 480px) {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+          /* 19.6px */
+          text-transform: uppercase;
+
+        }
       }
     }
 
     .bottom-item {
       max-width: 328px;
 
+      @media screen and (max-width: 480px) {
+        max-width: 274px;
+      }
+
       // 
       &.box2 {
         max-width: 356px;
+        display: flex;
+        flex-direction: column;
+
+        // 
+        @media screen and (max-width: 480px) {
+          max-width: 297px;
+        }
+      }
+
+      .box-title_item {
+        display: flex;
+        flex-direction: column;
       }
 
       .first-description {
@@ -12410,8 +12477,16 @@ section {
         /* 18.2px */
         text-transform: uppercase;
         margin-bottom: 16px;
-        // 
 
+        // 
+        @media screen and (max-width: 480px) {
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+          /* 16.8px */
+          text-transform: uppercase;
+        }
       }
 
       .description {
@@ -12423,6 +12498,17 @@ section {
         font-style: normal;
         font-weight: 400;
         line-height: 140%;
+
+        // 
+        @media screen and (max-width: 480px) {
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+          /* 16.8px */
+          text-transform: uppercase;
+
+        }
       }
 
       .second-box-title {
@@ -12442,6 +12528,16 @@ section {
         &:last-child {
           margin-bottom: 0;
         }
+
+        // 
+        @media screen and (max-width: 480px) {
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+          /* 16.8px */
+          text-transform: uppercase;
+        }
       }
 
       .btn {
@@ -12451,7 +12547,7 @@ section {
         align-items: center;
         gap: 10px;
         border-bottom: 1px solid #FFF;
-        margin-top: 12px;
+        margin-top: 14px;
         color: #FFF;
         font-family: "Helvetica Neue";
         font-size: 12px;
@@ -12462,6 +12558,17 @@ section {
         /* 15.6px */
         text-transform: uppercase;
         width: fit-content;
+
+        // 
+        @media screen and (max-width: 480px) {
+          margin-top: 12px;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%;
+          /* 15.6px */
+          text-transform: uppercase;
+        }
       }
     }
   }
