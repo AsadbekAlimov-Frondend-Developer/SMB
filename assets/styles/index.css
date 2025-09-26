@@ -6422,6 +6422,11 @@ section {
     margin-bottom: 0;
   }
 }
+@media (max-width: 480px) {
+  .blog .blog_about .blog-grid.article-end-grid {
+    gap: 16px;
+  }
+}
 .blog .blog_about .blog-grid.article .blog-image {
   margin-bottom: 0;
 }
@@ -6656,7 +6661,8 @@ section {
     display: none;
   }
   .blog .blog_about .blog-image {
-    height: 200px;
+    height: 240px;
+    margin-bottom: 8px;
   }
   .blog .blog_about .blog-title {
     font-size: 12px;
@@ -6672,6 +6678,7 @@ section {
   .blog .blog_about .cta-banner {
     padding: 16px;
     order: 2;
+    height: 300px;
   }
   .blog .blog_about .cta-title {
     color: #fff;
@@ -7293,6 +7300,16 @@ section {
   line-height: 130%;
   /* 18.2px */
   text-transform: uppercase;
+}
+@media screen and (max-width: 480px) {
+  .denomination .denomination_about .step .time_block .contend h1 {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 16.8px */
+    text-transform: uppercase;
+  }
 }
 .denomination .denomination_about .step .time_block .custom-date-picker {
   display: flex;
@@ -8189,13 +8206,13 @@ section {
   align-items: center;
   gap: 16px;
   cursor: pointer;
-  border: 1px solid var(--Grey, #555);
+  border: 1px solid var(--Input-dark-gray, #CACACA);
 }
 .denomination .denomination_about .modal-overlay .modal .payment-options .option:last-child {
   margin-bottom: 0;
 }
 .denomination .denomination_about .modal-overlay .modal .payment-options .option.selected {
-  border-color: #333333;
+  border: 1px solid var(--Grey, #555);
   background: #ffffff;
 }
 .denomination .denomination_about .modal-overlay .modal .payment-options .option .label {
@@ -8214,15 +8231,26 @@ section {
   height: 20px;
   margin-left: auto;
   cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
 }
-.denomination .denomination_about .modal-overlay .modal .payment-options .option input[type=radio][type=radio] {
-  outline: none;
-}
-.denomination .denomination_about .modal-overlay .modal .payment-options .option input[type=radio][type=radio]:focus {
+.denomination .denomination_about .modal-overlay .modal .payment-options .option input[type=radio]:focus {
   outline: none;
   box-shadow: 0 0 0 2px #ff5722;
-  /* o'zingiz istagan rang */
+}
+.denomination .denomination_about .modal-overlay .modal .payment-options .option input[type=radio]:checked::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: black;
   border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
 }
 .denomination .denomination_about .modal-overlay .modal .success-content {
   text-align: center;

@@ -6114,6 +6114,14 @@ section {
       }
 
       //
+      &.article-end-grid {
+        @media (max-width: 480px) {
+          gap: 16px;
+        }
+
+      }
+
+      //
       &.article {
         .blog-image {
           margin-bottom: 0;
@@ -6394,7 +6402,8 @@ section {
       }
 
       .blog-image {
-        height: 200px;
+        height: 240px;
+        margin-bottom: 8px;
       }
 
       .blog-title {
@@ -6414,6 +6423,7 @@ section {
       .cta-banner {
         padding: 16px;
         order: 2;
+        height: 300px;
       }
 
       .cta-title {
@@ -7110,6 +7120,16 @@ section {
             line-height: 130%;
             /* 18.2px */
             text-transform: uppercase;
+
+            // 
+            @media screen and (max-width: 480px) {
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%;
+              /* 16.8px */
+              text-transform: uppercase;
+            }
           }
         }
 
@@ -8113,14 +8133,14 @@ section {
             align-items: center;
             gap: 16px;
             cursor: pointer;
-            border: 1px solid var(--Grey, #555);
+            border: 1px solid var(--Input-dark-gray, #CACACA);
 
             &:last-child {
               margin-bottom: 0;
             }
 
             &.selected {
-              border-color: #333333;
+              border: 1px solid var(--Grey, #555);
               background: #ffffff;
             }
 
@@ -8145,18 +8165,28 @@ section {
               height: 20px;
               margin-left: auto;
               cursor: pointer;
+              appearance: none; // Default ko'rinishni olib tashlaydi
+              border: 2px solid black; // Tashqi border qora
+              border-radius: 50%;
+              position: relative;
 
-              &[type="radio"] {
+              &:focus {
                 outline: none;
+                box-shadow: 0 0 0 2px #ff5722; // Fokustagi rang, ixtiyoriy
               }
 
-              &[type="radio"]:focus {
-                outline: none;
-                box-shadow: 0 0 0 2px #ff5722;
-                /* o'zingiz istagan rang */
+              &:checked::before {
+                content: '';
+                width: 10px;
+                height: 10px;
+                background-color: black; // Ichki nuqta qora
                 border-radius: 50%;
+                position: absolute;
+                top: 4px;
+                left: 4px;
               }
             }
+
           }
         }
 
