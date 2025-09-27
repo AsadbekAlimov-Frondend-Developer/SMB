@@ -63,8 +63,7 @@
                     </button>
                     <!-- Left Navigation -->
                     <div class="navbar-left d-none d-lg-flex">
-                        <a href="#" class="nav-link">О НАС
-                        </a>
+                        <a href="about.html" class="nav-link">О НАС</a>
                         <a href="catalog.html" class="nav-link">ЖЕНЩИНА</a>
                         <a href="catalog.html" class="nav-link">МУЖЧИНА</a>
                     </div>
@@ -729,7 +728,7 @@
                                                                 МОСКВА,
                                                                 УЛ. ФЕДОСЬИНО ПУСТА
                                                             </div>
-                                                            <svg  class="x" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                            <svg class="x" xmlns="http://www.w3.org/2000/svg" width="24"
                                                                 height="24" viewBox="0 0 24 24" fill="none">
                                                                 <mask id="mask0_687_60585" style="mask-type:alpha"
                                                                     maskUnits="userSpaceOnUse" x="0" y="0" width="24"
@@ -872,7 +871,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group mt-4">
+                            <div class="form-group checkout-friend_group">
                                 <label class="form-label">другой способ*</label>
                                 <select class="form-select w-50f">
                                     <option>Выберать другой способ оплаты</option>
@@ -891,11 +890,15 @@
                                     <div class="form-row">
                                         <div class="form-group">
                                             <input type="text" class="form-input" id="giftCardNumber"
-                                                placeholder="123456789000">
+                                                placeholder="123456789000" inputmode="numeric" pattern="[0-9]*"
+                                                oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+
                                         </div>
                                         <div class="form-group">
                                             <input type="text" class="form-input" id="giftCardAmount"
-                                                placeholder="5000₽">
+                                                placeholder="5000₽" inputmode="numeric" pattern="[0-9]*"
+                                                oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+
                                         </div>
                                     </div>
 
@@ -904,7 +907,7 @@
 
                             <!-- Бонусы -->
                             <div class="toggle-section">
-                                <div class="toggle-wrapper">
+                                <div class="toggle-wrapper mb-0">
                                     <div class="toggle" id="bonusToggle">
                                         <div class="toggle-slider"></div>
                                     </div>

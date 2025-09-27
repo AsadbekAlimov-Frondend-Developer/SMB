@@ -440,15 +440,19 @@ $(document).ready(function () {
   //
   $(".profile__content").hide();
   $(".profile__content:first").show();
-  $(".profile__menu a").click(function () {
-    $(this).attr("href");
+
+  $(".profile__menu a").click(function (e) {
+    // e.preventDefault();
+    let target = $(this).data("target");
+    console.log(target);
     $(".profile__menu a").removeClass("active");
     $(this).addClass("active");
     $(".profile__content").hide();
-    $($(this).attr("href")).show();
+    // $("#" + target).show();
     $(".profile__content-wrapper").addClass("active");
     $(".profile__sidebar").addClass("active");
   });
+
   $(".sidebar_open  ").click(function () {
     $(".profile__content-wrapper").removeClass("active");
     $(".profile__sidebar").removeClass("active");
@@ -496,31 +500,31 @@ $(document).ready(function () {
 // ========================================================buyer modal =========================================
 
 function buyerModal() {
-  $('#cartModal').addClass('show');
+  $("#cartModal").addClass("show");
 }
 
 // Close cart modal
 function closeCartModal() {
-  $('#cartModal').removeClass('show');
+  $("#cartModal").removeClass("show");
 }
 
 // Close modal when clicking on overlay
-$('#cartModal').on('click', function (e) {
+$("#cartModal").on("click", function (e) {
   if (e.target === this) {
     closeCartModal();
   }
 });
 
 // Remove item functionality
-$('.item-remove').on('click', function () {
-  const cartItem = $(this).closest('.cart-item');
+$(".item-remove").on("click", function () {
+  const cartItem = $(this).closest(".cart-item");
   cartItem.fadeOut(300, function () {
     $(this).remove();
     updateCartCount();
     updateTotal();
 
     // Check if cart is empty
-    if ($('.cart-item').length === 0) {
+    if ($(".cart-item").length === 0) {
       showEmptyCart();
     }
   });
@@ -528,34 +532,34 @@ $('.item-remove').on('click', function () {
 
 // Update cart count
 function updateCartCount() {
-  const count = $('.cart-item').length;
+  const count = $(".cart-item").length;
 }
 
 // Update total price
 function updateTotal() {
   let total = 0;
-  $('.cart-item').each(function () {
-    const priceText = $(this).find('.item-price-current').text();
-    const price = parseInt(priceText.replace(/[^\d]/g, ''));
+  $(".cart-item").each(function () {
+    const priceText = $(this).find(".item-price-current").text();
+    const price = parseInt(priceText.replace(/[^\d]/g, ""));
     total += price;
   });
-  $('.cart-total-price').text(total.toLocaleString() + ' ₽');
+  $(".cart-total-price").text(total.toLocaleString() + " ₽");
 }
 
 // Show empty cart state
 function showEmptyCart() {
-  $('#cartContent').hide();
-  $('.cart-footer').hide();
-  $('#emptyCart').show();
-  $('.buyer_modal .cart-modal').css('height', 'fit-content');
-  $('.buyer_modal .cart-modal').css('width', 'fit-content');
-  $('.buyer_modal .cart-modal').css('overflow-y', 'unset');
-  $('.buyer_modal .cart-header').hide()
+  $("#cartContent").hide();
+  $(".cart-footer").hide();
+  $("#emptyCart").show();
+  $(".buyer_modal .cart-modal").css("height", "fit-content");
+  $(".buyer_modal .cart-modal").css("width", "fit-content");
+  $(".buyer_modal .cart-modal").css("overflow-y", "unset");
+  $(".buyer_modal .cart-header").hide();
 }
 
 // Demo: Toggle between empty and filled cart
 let isEmpty = false;
-$('#emptyCart .empty-cart-btn').on('click', function () {
+$("#emptyCart .empty-cart-btn").on("click", function () {
   if (isEmpty) {
     location.reload(); // Refresh to show items again
   } else {
@@ -565,11 +569,11 @@ $('#emptyCart .empty-cart-btn').on('click', function () {
 
 // ESC key to close modal
 $(document).keydown(function (e) {
-  if (e.key === 'Escape') {
+  if (e.key === "Escape") {
     closeCartModal();
   }
 });
-// 
+//
 function heart_icon(el) {
   el.classList.toggle("active");
 }
