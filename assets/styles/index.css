@@ -1404,7 +1404,7 @@ section {
   gap: 30px;
   white-space: nowrap;
   will-change: transform;
-  animation: marquee 20s linear infinite;
+  animation: marquee 60s linear infinite;
 }
 .top-banner .marquee-container .marquee-content span {
   display: inline-block;
