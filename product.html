@@ -851,7 +851,7 @@
         <!-- ===================== -->
         <section class="handbag-gallery">
             <div class="handbag-gallery__container container">
-                <div class="handbag2-gallery__slider swiper">
+                <div class="handbag-gallery__slider swiper">
                     <h1 class="handBag_title">Носи с чем хочешь</h1>
                     <div class="handbag-gallery__wrapper swiper-wrapper">
                         <div class="handbag-gallery__slide swiper-slide">
@@ -1524,65 +1524,13 @@
 
 
     <script>
-        const handbagSwiper = new Swiper('.handbag2-gallery__slider', {
-            // Asosiy parametrlar
-            slidesPerView: 3.2,
-            spaceBetween: 4,
-            loop: true, // Cheksiz aylanish
 
-            // Cheksiz silliq aylanish uchun
-            autoplay: {
-                delay: 0, // Kechikish yo'q
-                disableOnInteraction: false, // Foydalanuvchi interaction'dan keyin ham davom etadi
-                pauseOnMouseEnter: false, // Mouse enter bo'lganda ham to'xtamaydi
-                reverseDirection: false // O'ng tomonga harakat
-            },
-
-            // Silliq harakat parametrlari
-            speed: 4500, // Sekinroq harakat (3 soniya)
-
-            // FreeMode yoqilgan bo'lsa autoplay bilan muammo chiqarishi mumkin
-            // Shuning uchun uni o'chirib qo'yamiz yoki to'g'ri sozlaymiz
-            freeMode: false,
-
-            // Qo'shimcha silliqlik uchun
-            slidesPerGroup: 1, // Bir vaqtda bitta slide o'tkazadi
-
-            // CSS transition uchun
-            effect: 'slide', // Standart slide effect
-
-            // Responsive breakpoints
-            breakpoints: {
-                320: {
-                    slidesPerView: 1.3,
-                    spaceBetween: 4
-                },
-                480: {
-                    slidesPerView: 2.2,
-                    spaceBetween: 4
-                },
-                768: {
-                    slidesPerView: 3.2,
-                    spaceBetween: 4
-                }
-            },
-
-            // Qo'shimcha silliqlik uchun CSS class qo'shish
-            on: {
-                init: function () {
-                    // Swiper wrapper'ga qo'shimcha CSS class qo'shamiz
-                    this.wrapperEl.style.transitionTimingFunction = 'linear';
-                }
-            }
-        });
-
-        // Agar hali ham to'xtab qolsa, manual ravishda restart qilish
-        setInterval(() => {
-            if (handbagSwiper.autoplay && !handbagSwiper.autoplay.running) {
-                handbagSwiper.autoplay.start();
-            }
-        }, 1000);
-    </script>
+ 
+ 
+ 
+ 
+ 
+ </script>
 
 
 </body>

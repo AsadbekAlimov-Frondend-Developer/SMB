@@ -174,32 +174,132 @@ function initializeHeroSwiper() {
     effect: "slide",
   });
 }
-//
+//===================================================
+
 document.addEventListener("DOMContentLoaded", function () {
   // Handbag Gallery Swiper
-  const handbagGallerySwiper = new Swiper(".handbag-gallery__slider", {
-    slidesPerView: 3.5,
+  const handbagSwiper = new Swiper('.handbag-gallery__slider', {
+    // Asosiy parametrlar
+    slidesPerView: 3.2,
     spaceBetween: 4,
-    loop: true,
+    loop: true, // Cheksiz aylanish
     grabCursor: true,
 
+    // Cheksiz silliq aylanish uchun
+    autoplay: {
+      delay: 0, // Kechikish yo'q
+      disableOnInteraction: false, // Foydalanuvchi interaction'dan keyin ham davom etadi
+      pauseOnMouseEnter: false, // Mouse enter bo'lganda ham to'xtamaydi
+      reverseDirection: false // O'ng tomonga harakat
+    },
+
+    // Silliq harakat parametrlari
+    speed: 6500, // Sekinroq harakat (3 soniya)
+
+    // FreeMode yoqilgan bo'lsa autoplay bilan muammo chiqarishi mumkin
+    // Shuning uchun uni o'chirib qo'yamiz yoki to'g'ri sozlaymiz
+    freeMode: false,
+
+    // Qo'shimcha silliqlik uchun
+    slidesPerGroup: 1, // Bir vaqtda bitta slide o'tkazadi
+
+    // CSS transition uchun
+    effect: 'slide', // Standart slide effect
+
+    // Responsive breakpoints
     breakpoints: {
       320: {
         slidesPerView: 1.3,
-        spaceBetween: 8,
-        loop: true,
+        spaceBetween: 4
+      },
+      480: {
+        slidesPerView: 2.2,
+        spaceBetween: 4
       },
       768: {
-        slidesPerView: 3.5,
-        spaceBetween: 4,
-        loop: true,
-      },
+        slidesPerView: 3.2,
+        spaceBetween: 4
+      }
     },
-    mousewheel: {
-      forceToAxis: true,
-    },
+
+    // Qo'shimcha silliqlik uchun CSS class qo'shish
+    on: {
+      init: function () {
+        // Swiper wrapper'ga qo'shimcha CSS class qo'shamiz
+        this.wrapperEl.style.transitionTimingFunction = 'linear';
+      }
+    }
   });
 });
+
+// const handbagSwiper = new Swiper('.handbag2-gallery__slider', {
+//   // Asosiy parametrlar
+//   slidesPerView: 3.2,
+//   spaceBetween: 4,
+//   loop: true, // Cheksiz aylanish
+//   grabCursor: true,
+
+//   // Cheksiz silliq aylanish uchun
+//   autoplay: {
+//     delay: 0, // Kechikish yo'q
+//     disableOnInteraction: false, // Foydalanuvchi interaction'dan keyin ham davom etadi
+//     pauseOnMouseEnter: false, // Mouse enter bo'lganda ham to'xtamaydi
+//     reverseDirection: false // O'ng tomonga harakat
+//   },
+
+//   // Silliq harakat parametrlari
+//   speed: 6500, // Sekinroq harakat 
+
+//   // FreeMode yoqilgan bo'lsa autoplay bilan muammo chiqarishi mumkin
+//   // Shuning uchun uni o'chirib qo'yamiz yoki to'g'ri sozlaymiz
+//   freeMode: false,
+
+//   // Qo'shimcha silliqlik uchun
+//   slidesPerGroup: 1, // Bir vaqtda bitta slide o'tkazadi
+
+//   // CSS transition uchun
+//   effect: 'slide', // Standart slide effect
+
+//   // Responsive breakpoints
+//   breakpoints: {
+//     320: {
+//       slidesPerView: 1.3,
+//       spaceBetween: 4
+//     },
+//     480: {
+//       slidesPerView: 2.2,
+//       spaceBetween: 4
+//     },
+//     768: {
+//       slidesPerView: 3.2,
+//       spaceBetween: 4
+//     }
+//   },
+
+//   // Qo'shimcha silliqlik uchun CSS class qo'shish
+//   on: {
+//     init: function () {
+//       // Swiper wrapper'ga qo'shimcha CSS class qo'shamiz
+//       this.wrapperEl.style.transitionTimingFunction = 'linear';
+//     }
+//   }
+// });
+
+
+
+
+
+
+setInterval(() => {
+  if (handbagSwiper.autoplay && !handbagSwiper.autoplay.running) {
+    handbagSwiper.autoplay.start();
+  }
+}, 1000);
+
+
+
+
+
 
 const children = document.querySelectorAll(".handbag-gallery__card");
 
@@ -989,6 +1089,31 @@ const swiper = new Swiper(".article_slider", {
   autoplay: {
     delay: 3000,
   },
+
+
+
+  // Cheksiz silliq aylanish uchun
+  autoplay: {
+    delay: 0, // Kechikish yo'q
+    disableOnInteraction: false, // Foydalanuvchi interaction'dan keyin ham davom etadi
+    pauseOnMouseEnter: false, // Mouse enter bo'lganda ham to'xtamaydi
+    reverseDirection: false // O'ng tomonga harakat
+  },
+
+  // Silliq harakat parametrlari
+  speed: 6500, // Sekinroq harakat (3 soniya)
+
+  // FreeMode yoqilgan bo'lsa autoplay bilan muammo chiqarishi mumkin
+  // Shuning uchun uni o'chirib qo'yamiz yoki to'g'ri sozlaymiz
+  freeMode: false,
+
+  // Qo'shimcha silliqlik uchun
+  slidesPerGroup: 1, // Bir vaqtda bitta slide o'tkazadi
+
+  // CSS transition uchun
+  effect: 'slide', // Standart slide effect
+
+  // Responsive breakpoints
   breakpoints: {
     0: {
       slidesPerView: 1.3,
@@ -998,6 +1123,14 @@ const swiper = new Swiper(".article_slider", {
       spaceBetween: 4,
     },
   },
+
+  // Qo'shimcha silliqlik uchun CSS class qo'shish
+  on: {
+    init: function () {
+      // Swiper wrapper'ga qo'shimcha CSS class qo'shamiz
+      this.wrapperEl.style.transitionTimingFunction = 'linear';
+    }
+  }
 });
 
 //  =============================== denomination page js ========================
@@ -1045,7 +1178,7 @@ $(document).ready(function () {
   function switchToStep(step) {
     const actualStep =
       typeof step === "string" &&
-      ["nominal", "to", "from", "when"].includes(step)
+        ["nominal", "to", "from", "when"].includes(step)
         ? getStepFromTab(step)
         : step;
 
