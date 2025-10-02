@@ -1458,6 +1458,7 @@ section {
 }
 .header .navbar {
   padding: 0;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .header .navbar .logo img {
@@ -1479,9 +1480,14 @@ section {
   /* 18.2px */
   text-transform: uppercase;
 }
+.header .navbar .navbar-brand {
+  position: absolute;
+  left: 48%;
+}
 @media screen and (max-width: 480px) {
   .header .navbar .navbar-brand {
     width: 0;
+    position: static;
   }
   .header .navbar .navbar-brand svg {
     width: 40px;
@@ -1713,7 +1719,7 @@ section {
 }
 
 .hero-slider {
-  height: 600px;
+  height: 100vh;
   position: relative;
 }
 @media screen and (max-width: 768px) {
@@ -2045,6 +2051,20 @@ section {
     width: 24px;
     height: 80px;
   }
+  .collection-section .isnew-icon svg text {
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 14px */
+    text-transform: uppercase;
+  }
+}
+.collection-section .isnew-icon:hover {
+  background: var(--Green, #91BE17);
+}
+.collection-section .isnew-icon:hover text {
+  fill: #FFF;
 }
 .collection-section .product-brand {
   color: var(--Black, #272727);
@@ -2107,6 +2127,16 @@ section {
   background: none;
   margin-top: -6px;
   font-size: 12px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  /* 12px */
+  color: var(--Grey, #555);
 }
 @media (max-width: 992px) {
   .collection-section .product-card {
@@ -2701,19 +2731,22 @@ section {
   }
 }
 .smb-newsletter-section .smb-newsletter-container .smb-newsletter-description {
-  color: var(--Grey, #555);
+  color: var(--50-black, #858585);
   text-align: center;
-  /* Desktop/P2 */
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Helvetica Neue";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 140%;
-  /* 19.6px */
+  line-height: 130%;
+  /* 18.2px */
 }
 @media screen and (max-width: 480px) {
   .smb-newsletter-section .smb-newsletter-container .smb-newsletter-description {
     font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 16.8px */
   }
 }
 .smb-newsletter-section .smb-newsletter-container .smb-subscribe-btn {
@@ -3122,7 +3155,6 @@ section {
   font-weight: 400;
   line-height: 130%;
   /* 18.2px */
-  text-transform: uppercase;
   margin-bottom: 32px;
 }
 .smb-footer .smb-footer-desktop .smb-footer-content .smb-footer-column .smb-payment-icons {
@@ -3150,7 +3182,6 @@ section {
   font-weight: 400;
   line-height: 130%;
   /* 18.2px */
-  text-transform: uppercase;
 }
 .smb-footer .smb-footer-desktop .smb-footer-content .smb-footer-column:first-child .smb-contact-info .contact-title {
   font-size: 11px;
@@ -3175,6 +3206,7 @@ section {
   margin-top: 136px;
 }
 .smb-footer .smb-footer-desktop .smb-footer-content .smb-footer-column:first-child .smb-contact-info .company-info a {
+  text-transform: uppercase;
   color: #777;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 12px;
@@ -3183,6 +3215,7 @@ section {
   line-height: 130%;
   display: block;
   margin-bottom: 4px;
+  text-transform: uppercase;
 }
 .smb-footer .smb-footer-desktop .smb-footer-content .smb-footer-column:first-child .smb-contact-info .company-info a:last-child {
   margin-bottom: 0;
@@ -3216,7 +3249,6 @@ section {
   font-weight: 400;
   line-height: 130%;
   /* 18.2px */
-  text-transform: uppercase;
 }
 .smb-footer .smb-footer-desktop .smb-footer-content .smb-footer-column:nth-child(4) .smb-footer-links {
   list-style: none;
@@ -3232,7 +3264,6 @@ section {
   font-weight: 400;
   line-height: 130%;
   /* 18.2px */
-  text-transform: uppercase;
 }
 .smb-footer .smb-footer-desktop .smb-footer-bottom {
   display: flex;
@@ -3432,10 +3463,9 @@ section {
 }
 .catalog .main-content {
   background: #fff;
-  margin-top: 42px;
+  margin-top: 49px;
   position: fixed;
   width: 100%;
-  height: 32px;
   z-index: 99;
 }
 .catalog .main-content.header-top_active {
@@ -3534,7 +3564,6 @@ section {
   line-height: 130%;
   /* 15.6px */
   text-transform: uppercase;
-  padding-top: 6px;
 }
 @media (max-width: 768px) {
   .catalog .filter-section .filter-controls .filter-btn {
@@ -3551,7 +3580,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  margin-top: 98px;
+  margin-top: 105px;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1001;
   opacity: 0;

@@ -339,6 +339,7 @@ section {
 
   .navbar {
     padding: 0;
+    position: relative;
 
     //
     .logo {
@@ -368,14 +369,19 @@ section {
     }
 
     .navbar-brand {
+      position: absolute;
+      left: 48%;
+
       @media screen and (max-width: 480px) {
         width: 0;
+        position: static;
 
         //
         svg {
           width: 40px;
           height: 22px;
         }
+
       }
     }
 
@@ -552,7 +558,7 @@ section {
       }
     }
 
-    .mobile-nav-link + .nav-section {
+    .mobile-nav-link+.nav-section {
       margin-top: 24px;
     }
 
@@ -651,7 +657,7 @@ section {
 
 // Hero Slider
 .hero-slider {
-  height: 600px;
+  height: 100vh;
   position: relative;
 
   //
@@ -878,6 +884,7 @@ section {
 
 // ======================================header end============
 .collection-section {
+
   //
   @media screen and (max-width: 480px) {
     margin-bottom: 32px;
@@ -1006,6 +1013,26 @@ section {
       @media screen and (max-width: 768px) {
         width: 24px;
         height: 80px;
+
+        // 
+        text {
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+          /* 14px */
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    // 
+    &:hover {
+      background: var(--Green, #91BE17);
+
+      // 
+      text {
+        fill: #FFF;
       }
     }
   }
@@ -1077,6 +1104,15 @@ section {
       background: none;
       margin-top: -6px;
       font-size: 12px;
+      width: fit-content;
+      height: fit-content;
+      margin: 0;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%;
+      /* 12px */
+      color: var(--Grey, #555);
+
     }
   }
 
@@ -1218,6 +1254,7 @@ section {
 
   //
   .block {
+
     //
     img {
       width: 100%;
@@ -1247,6 +1284,7 @@ section {
 
 // ============moni-moss end============
 .handbag-gallery {
+
   //
   @media (max-width: 480px) {
     margin-bottom: 32px;
@@ -1457,6 +1495,7 @@ section {
 
   //
   .block {
+
     //
     @media screen and (max-width: 480px) {
       width: 100%;
@@ -1564,6 +1603,7 @@ section {
 
   //
   .block {
+
     //
     @media screen and (max-width: 480px) {
       width: 75%;
@@ -1764,18 +1804,21 @@ section {
     }
 
     .smb-newsletter-description {
-      color: var(--Grey, #555);
+      color: var(--50-black, #858585);
       text-align: center;
-      /* Desktop/P2 */
-      font-family: "Helvetica Neue", sans-serif;
+      font-family: "Helvetica Neue";
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
-      line-height: 140%;
-      /* 19.6px */
+      line-height: 130%;
+      /* 18.2px */
 
       @media screen and (max-width: 480px) {
         font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        /* 16.8px */
       }
     }
 
@@ -2222,7 +2265,6 @@ section {
           font-weight: 400;
           line-height: 130%;
           /* 18.2px */
-          text-transform: uppercase;
           margin-bottom: 32px;
         }
 
@@ -2256,7 +2298,6 @@ section {
                 font-weight: 400;
                 line-height: 130%;
                 /* 18.2px */
-                text-transform: uppercase;
               }
             }
           }
@@ -2287,6 +2328,7 @@ section {
               margin-top: 136px;
 
               a {
+                text-transform: uppercase;
                 color: #777;
                 font-family: "Helvetica Neue", sans-serif;
                 font-size: 12px;
@@ -2295,6 +2337,7 @@ section {
                 line-height: 130%;
                 display: block;
                 margin-bottom: 4px;
+                text-transform: uppercase;
 
                 &:last-child {
                   margin-bottom: 0;
@@ -2339,7 +2382,6 @@ section {
                 font-weight: 400;
                 line-height: 130%;
                 /* 18.2px */
-                text-transform: uppercase;
               }
             }
           }
@@ -2360,7 +2402,6 @@ section {
                 font-weight: 400;
                 line-height: 130%;
                 /* 18.2px */
-                text-transform: uppercase;
               }
             }
           }
@@ -2609,6 +2650,7 @@ section {
 
 // ======================================================== catalog
 .catalog {
+
   //
   .hero-slider {
     margin-bottom: 16px;
@@ -2625,10 +2667,9 @@ section {
 
   .main-content {
     background: #fff;
-    margin-top: 42px;
+    margin-top: 49px;
     position: fixed;
     width: 100%;
-    height: 32px;
     z-index: 99;
 
     &.header-top_active {
@@ -2733,7 +2774,6 @@ section {
         line-height: 130%;
         /* 15.6px */
         text-transform: uppercase;
-        padding-top: 6px;
 
         @media (max-width: 768px) {
           font-size: 12px;
@@ -2754,7 +2794,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    margin-top: 98px;
+    margin-top: 105px;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1001;
     opacity: 0;
@@ -3514,7 +3554,7 @@ section {
           display: none;
           padding: 2px;
 
-          &:checked + label {
+          &:checked+label {
             outline: 2px solid var(--Grey, #555);
             outline-offset: 2px;
           }
@@ -3580,7 +3620,7 @@ section {
         input[type="radio"] {
           display: none;
 
-          &:checked + label {
+          &:checked+label {
             border-radius: 100px;
             border: 1px solid var(--Black, #272727);
             color: #f0f0f0;
@@ -3637,7 +3677,7 @@ section {
         input[type="radio"] {
           display: none;
 
-          &:checked + label {
+          &:checked+label {
             border-radius: 100px;
             border: 1px solid var(--Black, #272727);
             background: var(--Black, #272727);
@@ -3676,7 +3716,7 @@ section {
 
       @media screen and (max-width: 480px) {
         gap: 0;
-        
+
 
         .price__installment {
           margin-left: 16px;
@@ -4634,6 +4674,7 @@ section {
     }
 
     .handbag-gallery__image {
+
       //
       @media screen and (max-width: 480px) {
         height: 300px !important;
@@ -4693,6 +4734,7 @@ section {
 
     //
     .container {
+
       //
       @media screen and (max-width: 768px) {
         padding: 0 !important;
@@ -5696,6 +5738,7 @@ section {
           display: block !important;
 
           @media screen and (max-width: 480px) {
+
             //
             br {
               display: none;
@@ -5860,6 +5903,7 @@ section {
 
           //
           @media screen and (max-width: 768px) {
+
             //
             &:first-child {
               margin-top: 0;
@@ -7037,6 +7081,7 @@ section {
       //
       &.step2 {
         .step-title {
+
           //
           @media (max-width: 768px) {
             margin-bottom: 32px;
@@ -8438,7 +8483,7 @@ section {
     input {
       display: none;
 
-      &:checked ~ .checkmark::after {
+      &:checked~.checkmark::after {
         opacity: 1;
         transform: scale(1);
       }
@@ -8636,7 +8681,7 @@ section {
         input {
           display: none;
 
-          &:checked ~ span {
+          &:checked~span {
             background-color: #272727;
             color: #fff;
           }
@@ -8691,7 +8736,7 @@ section {
         input {
           display: none;
 
-          &:checked ~ span {
+          &:checked~span {
             background-color: #272727;
             color: #fff;
           }
@@ -8732,7 +8777,7 @@ section {
         input {
           display: none;
 
-          &:checked ~ .checkmark::after {
+          &:checked~.checkmark::after {
             opacity: 1;
           }
         }
@@ -9151,6 +9196,7 @@ section {
 
 // =========================================karzina=================================================================================
 .buyer_modal {
+
   /* Modal overlay */
   .cart-modal-overlay {
     position: fixed;
@@ -10131,7 +10177,7 @@ section {
     }
 
     // Show dot when checked
-    input[type="radio"]:checked ~ &::before,
+    input[type="radio"]:checked~&::before,
     &:has(input[type="radio"]:checked)::before {
       display: block;
     }
@@ -10704,7 +10750,7 @@ section {
     }
 
     // Show inner dot when checked
-    input[type="radio"]:checked ~ &::before,
+    input[type="radio"]:checked~&::before,
     &:has(input[type="radio"]:checked)::before {
       display: block;
     }
@@ -11588,6 +11634,7 @@ section {
 
     .orders_tab {
       padding: 40px 16px;
+
       &#profile__content1 {
         padding: 40px 16px 16px;
       }
@@ -11600,6 +11647,7 @@ section {
         gap: 40px;
         margin-bottom: 40px;
         border-bottom: 1px solid rgba(164, 164, 164, 0.3);
+
         @media screen and (max-width: 480px) {
           margin-bottom: 32px;
         }
@@ -11612,15 +11660,18 @@ section {
           font-size: 14px;
           transition: 0s;
           margin-bottom: -1px;
+
           &.active {
             padding-bottom: 8px;
             border-bottom: 2px solid #555;
           }
+
           &#profile__content1 {
             padding: 40px 16px 16px;
           }
         }
       }
+
       &__content {
         display: none;
 
@@ -11636,14 +11687,18 @@ section {
         width: 100%;
         gap: 20px 0;
       }
+
       .order_banner {
         margin-top: 60px;
         position: relative;
+
         @media (max-width: 768px) {
           margin-top: 23px;
         }
+
         img {
           width: 100%;
+
           @media (max-width: 768px) {
             min-height: 300px;
             object-fit: cover;
@@ -11734,14 +11789,17 @@ section {
           min-height: auto;
         }
       }
+
       .swiper-button-next,
       .swiper-button-prev {
         width: fit-content;
         height: fit-content;
       }
+
       .swiper-button-next {
         right: 20px;
       }
+
       .swiper-button-prev {
         left: 20px;
       }
@@ -11764,6 +11822,7 @@ section {
 
       &__price {
         margin-top: 16px;
+
         &.opacity {
           color: rgba(39, 39, 39, 0.6);
         }
@@ -11921,7 +11980,7 @@ section {
       box-sizing: border-box;
     }
 
-    .custom_checkbox_input:checked + .custom_checkbox_box::after {
+    .custom_checkbox_input:checked+.custom_checkbox_box::after {
       content: "";
       position: absolute;
       left: 4px;
@@ -12383,7 +12442,7 @@ section {
       box-sizing: border-box;
     }
 
-    .custom_checkbox_input:checked + .custom_checkbox_box::after {
+    .custom_checkbox_input:checked+.custom_checkbox_box::after {
       content: "";
       position: absolute;
       left: 4px;
