@@ -114,35 +114,35 @@ input[type="checkbox"]:hover {
 @import "bonus";
 
 @font-face {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   src: url("../fonts/HelveticaNeue-Thin.otf") format("truetype");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   src: url("../fonts/HelveticaNeue-Light.otf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   src: url("../fonts/HelveticaNeue-Roman.otf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   src: url("../fonts/HelveticaNeue-Medium.otf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   src: url("../fonts/HelveticaNeue-Bold.otf") format("truetype");
   font-weight: 700;
   font-style: normal;
@@ -1815,7 +1815,7 @@ section {
     .smb-newsletter-description {
       color: var(--50-black, #858585);
       text-align: center;
-      font-family: "Helvetica Neue";
+      font-family: "Helvetica Neue", sans-serif;
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
@@ -2684,6 +2684,7 @@ section {
     &.header-top_active {
       margin-top: 24px;
     }
+
     // 
     @media screen and (max-width: 480px) {
       margin-top: 43px;
@@ -2911,7 +2912,6 @@ section {
 
       .filter_item {
         width: 250px;
-        overflow-y: scroll;
       }
 
       .filter-group {
@@ -3310,7 +3310,7 @@ section {
     align-items: center;
     gap: 8px;
     color: var(--50-black, #858585);
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica Neue", sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -7160,7 +7160,7 @@ section {
             color: #000;
 
             /* Desktop/P1 */
-            font-family: "Helvetica Neue";
+            font-family: "Helvetica Neue", sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
@@ -8710,7 +8710,7 @@ section {
           border-radius: 100px;
           color: var(--Grey, #555);
           text-align: center;
-          font-family: "Helvetica Neue";
+          font-family: "Helvetica Neue", sans-serif;
           font-size: 12px;
           font-style: normal;
           font-weight: 400;
@@ -10354,7 +10354,7 @@ section {
     color: var(--Grey, #555);
 
     /* Desktop/P1 */
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica Neue", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -10366,7 +10366,7 @@ section {
 
   .pickup-address {
     color: var(--Grey, #555);
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica Neue", sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -11402,7 +11402,7 @@ section {
 
           .replace_password {
             color: #91be17;
-            font-family: "Helvetica Neue";
+            font-family: "Helvetica Neue", sans-serif;
             font-size: 12px;
             font-style: normal;
             font-weight: 400;
@@ -11431,7 +11431,7 @@ section {
 
       .section_title {
         color: #272727;
-        font-family: "Helvetica Neue";
+        font-family: "Helvetica Neue", sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -11633,7 +11633,7 @@ section {
 
         a {
           color: var(--Grey, #555);
-          font-family: "Helvetica Neue";
+          font-family: "Helvetica Neue", sans-serif;
           font-size: 12px;
           font-style: normal;
           font-weight: 400;
@@ -12677,7 +12677,7 @@ section {
 
   .modal_input-title {
     color: #272727;
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica Neue", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -12691,7 +12691,7 @@ section {
     padding: 9px 12px;
     outline: none;
     color: var(--Grey, #555);
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica Neue", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -12722,7 +12722,7 @@ section {
       color: var(--Black, #272727);
 
       /* Desktop/H1 */
-      font-family: "Helvetica Neue";
+      font-family: "Helvetica Neue", sans-serif;
       font-size: 24px;
       font-style: normal;
       font-weight: 400;
@@ -12787,7 +12787,7 @@ section {
         color: var(--White, #fff);
 
         /* Desktop/H1 */
-        font-family: "Helvetica Neue";
+        font-family: "Helvetica Neue", sans-serif;
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
@@ -12835,7 +12835,7 @@ section {
         color: var(--White, #fff);
 
         /* Desktop/P1 */
-        font-family: "Helvetica Neue";
+        font-family: "Helvetica Neue", sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -12859,7 +12859,7 @@ section {
         color: var(--White, #fff);
 
         /* Desktop/P2 */
-        font-family: "Helvetica Neue";
+        font-family: "Helvetica Neue", sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -12880,7 +12880,7 @@ section {
         color: var(--White, #fff);
 
         /* Desktop/P1 */
-        font-family: "Helvetica Neue";
+        font-family: "Helvetica Neue", sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -12914,7 +12914,7 @@ section {
         border-bottom: 1px solid #fff;
         margin-top: 14px;
         color: #fff;
-        font-family: "Helvetica Neue";
+        font-family: "Helvetica Neue", sans-serif;
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -12965,5 +12965,193 @@ section {
     @media screen and (max-width: 480px) {
       margin-bottom: 32px;
     }
+  }
+}
+
+// 
+.page-404 {
+  .page-404_about {
+    margin-top: 108px;
+    margin-bottom: 40px;
+
+    // 
+    @media screen and (max-width: 480px) {
+      margin-top: 44px;
+      margin-bottom: 0;
+    }
+
+    // 
+    .container {
+      padding-left: 0 !important;
+
+      // 
+      @media screen and (max-width: 480px) {
+        padding: 0 8px !important;
+      }
+    }
+
+    // 
+    .title-404 {
+      color: var(--Black, #272727);
+
+      /* Desktop/H2 */
+      font-family: "Helvetica Neue", sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      /* 20.8px */
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 115px;
+
+      // 
+      @media screen and (max-width: 480px) {
+        display: none;
+      }
+    }
+
+    // 
+    .block-404 {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+
+      // 
+      @media screen and (max-width: 675px) {
+        justify-content: center;
+      }
+    }
+
+    // 
+    img {
+      width: 554px;
+      height: 322px;
+      margin-bottom: 16px;
+      // object-fit: cover;
+
+
+
+      // 
+      @media screen and (max-width: 540px) {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 0;
+        border: none;
+        order: 2;
+      }
+    }
+
+    .card {
+      border: none;
+
+      // 
+      @media screen and (max-width: 675px) {
+        order: 2;
+      }
+    }
+
+    .contend {
+      margin: 16px;
+
+
+
+      // 
+      // 
+      @media screen and (max-width: 480px) {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 40px;
+        order: 1;
+      }
+
+      // 
+      h2 {
+        color: var(--Grey, #555);
+
+        /* Desktop/H2 */
+        font-family: "Helvetica Neue", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        /* 20.8px */
+        text-transform: uppercase;
+        width: 306px;
+        margin-bottom: 16px;
+
+        // 
+        @media screen and (max-width: 480px) {
+          width: 245px;
+          margin: 0 auto;
+          margin-bottom: 16px;
+          font-size: 12px;
+          line-height: 140%;
+        }
+      }
+
+      a {
+        width: fit-content;
+        display: flex;
+        height: 38px;
+        padding: 8px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 100px;
+        border: 1px solid var(--Green, #91BE17);
+        color: var(--Green, #91BE17);
+        font-family: "Helvetica Neue", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        /* 15.6px */
+        text-transform: uppercase;
+
+        // 
+        @media screen and (max-width: 480px) {
+          margin: 0 auto;
+        }
+      }
+
+    }
+
+    .text-404 {
+
+      // 
+      @media screen and (max-width: 675px) {
+        order: 1;
+        margin-bottom: 16px;
+      }
+
+      p {
+        color: #272727;
+        font-family: "Helvetica Neue", sans-serif;
+        font-size: 400px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        /* 400px */
+        text-transform: uppercase;
+
+        // 
+        @media screen and (max-width: 675px) {
+          font-size: 200px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 100%;
+          text-transform: uppercase;
+        }
+
+        @media screen and (max-width: 480px) {
+          font-size: 200px;
+        }
+
+      }
+    }
+
   }
 }

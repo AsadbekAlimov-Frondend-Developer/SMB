@@ -1272,31 +1272,31 @@ input[type=checkbox]:hover {
 }
 
 @font-face {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   src: url("../fonts/HelveticaNeue-Thin.otf") format("truetype");
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   src: url("../fonts/HelveticaNeue-Light.otf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   src: url("../fonts/HelveticaNeue-Roman.otf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   src: url("../fonts/HelveticaNeue-Medium.otf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   src: url("../fonts/HelveticaNeue-Bold.otf") format("truetype");
   font-weight: 700;
   font-style: normal;
@@ -2741,7 +2741,7 @@ section {
 .smb-newsletter-section .smb-newsletter-container .smb-newsletter-description {
   color: var(--50-black, #858585);
   text-align: center;
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -3687,7 +3687,6 @@ section {
 }
 .catalog .filter-modal .filter-content .filter_item {
   width: 250px;
-  overflow-y: scroll;
 }
 .catalog .filter-modal .filter-content .filter-group {
   margin-bottom: 32px;
@@ -4020,7 +4019,7 @@ section {
   align-items: center;
   gap: 8px;
   color: var(--50-black, #858585);
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -7335,7 +7334,7 @@ section {
 .denomination .denomination_about .step .time_block .contend h1 {
   color: #000;
   /* Desktop/P1 */
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -8705,7 +8704,7 @@ section {
   border-radius: 100px;
   color: var(--Grey, #555);
   text-align: center;
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -10153,7 +10152,7 @@ input[type=radio]:checked ~ .checkout_about .delivery-service::before, .checkout
 .checkout_about .pickup-name {
   color: var(--Grey, #555);
   /* Desktop/P1 */
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -10164,7 +10163,7 @@ input[type=radio]:checked ~ .checkout_about .delivery-service::before, .checkout
 }
 .checkout_about .pickup-address {
   color: var(--Grey, #555);
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -11092,7 +11091,7 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
 }
 .profile-page .profile__content.pasword_content .btn_container .replace_password {
   color: #91be17;
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -11117,7 +11116,7 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
 }
 .profile-page .profile__content .section_title {
   color: #272727;
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -11299,7 +11298,7 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
 }
 .profile-page .profile .gift_cards_section .gift_cards_footer a {
   color: var(--Grey, #555);
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -12239,7 +12238,7 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
 }
 .modal_input .modal_input-title {
   color: #272727;
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -12252,7 +12251,7 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
   padding: 9px 12px;
   outline: none;
   color: var(--Grey, #555);
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -12278,7 +12277,7 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
   max-width: 562px;
   color: var(--Black, #272727);
   /* Desktop/H1 */
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -12334,7 +12333,7 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
 .about .about-blocks .top-item h4 {
   color: var(--White, #fff);
   /* Desktop/H1 */
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -12377,7 +12376,7 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
 .about .about-blocks .bottom-item .first-description {
   color: var(--White, #fff);
   /* Desktop/P1 */
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -12399,7 +12398,7 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
 .about .about-blocks .bottom-item .description {
   color: var(--White, #fff);
   /* Desktop/P2 */
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -12418,7 +12417,7 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
 .about .about-blocks .bottom-item .second-box-title {
   color: var(--White, #fff);
   /* Desktop/P1 */
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -12449,7 +12448,7 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
   border-bottom: 1px solid #fff;
   margin-top: 14px;
   color: #fff;
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -12492,5 +12491,164 @@ input[type=radio]:checked ~ .checkout_about .payment-option::before, .checkout_a
 @media screen and (max-width: 480px) {
   .favaurites .collection-section {
     margin-bottom: 32px;
+  }
+}
+
+.page-404 .page-404_about {
+  margin-top: 108px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 480px) {
+  .page-404 .page-404_about {
+    margin-top: 44px;
+    margin-bottom: 0;
+  }
+}
+.page-404 .page-404_about .container {
+  padding-left: 0 !important;
+}
+@media screen and (max-width: 480px) {
+  .page-404 .page-404_about .container {
+    padding: 0 8px !important;
+  }
+}
+.page-404 .page-404_about .title-404 {
+  color: var(--Black, #272727);
+  /* Desktop/H2 */
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  /* 20.8px */
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 115px;
+}
+@media screen and (max-width: 480px) {
+  .page-404 .page-404_about .title-404 {
+    display: none;
+  }
+}
+.page-404 .page-404_about .block-404 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+}
+@media screen and (max-width: 675px) {
+  .page-404 .page-404_about .block-404 {
+    justify-content: center;
+  }
+}
+.page-404 .page-404_about img {
+  width: 554px;
+  height: 322px;
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 540px) {
+  .page-404 .page-404_about img {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 0;
+    border: none;
+    order: 2;
+  }
+}
+.page-404 .page-404_about .card {
+  border: none;
+}
+@media screen and (max-width: 675px) {
+  .page-404 .page-404_about .card {
+    order: 2;
+  }
+}
+.page-404 .page-404_about .contend {
+  margin: 16px;
+}
+@media screen and (max-width: 480px) {
+  .page-404 .page-404_about .contend {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 40px;
+    order: 1;
+  }
+}
+.page-404 .page-404_about .contend h2 {
+  color: var(--Grey, #555);
+  /* Desktop/H2 */
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  /* 20.8px */
+  text-transform: uppercase;
+  width: 306px;
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 480px) {
+  .page-404 .page-404_about .contend h2 {
+    width: 245px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    font-size: 12px;
+    line-height: 140%;
+  }
+}
+.page-404 .page-404_about .contend a {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  height: 38px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  border: 1px solid var(--Green, #91BE17);
+  color: var(--Green, #91BE17);
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  /* 15.6px */
+  text-transform: uppercase;
+}
+@media screen and (max-width: 480px) {
+  .page-404 .page-404_about .contend a {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 675px) {
+  .page-404 .page-404_about .text-404 {
+    order: 1;
+    margin-bottom: 16px;
+  }
+}
+.page-404 .page-404_about .text-404 p {
+  color: #272727;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 400px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  /* 400px */
+  text-transform: uppercase;
+}
+@media screen and (max-width: 675px) {
+  .page-404 .page-404_about .text-404 p {
+    font-size: 200px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: uppercase;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page-404 .page-404_about .text-404 p {
+    font-size: 200px;
   }
 }/*# sourceMappingURL=index.css.map */

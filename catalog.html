@@ -487,13 +487,12 @@
 
         <!-- Filter Modal -->
         <div class="filter-overlay" id="filterOverlay" onclick="toggleFilterModal()"></div>
-
-        <div class="filter-modal" id="filterModal">
+        <form action="#" class="filter-modal" id="filterModal">
             <div class="filter-content">
 
                 <div class="filter-header">
                     <div class="filter-title">ФИЛЬТРЫ И СОРТИРОВКА</div>
-                    <button class="filter-close" onclick="toggleFilterModal()">
+                    <button type="button" class="filter-close" onclick="toggleFilterModal()">
                         <span>Закрыть</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
                             <path
@@ -510,19 +509,23 @@
                         <div class="sort-options">
                             <div class="sort-option" onclick="selectSort(this)">
                                 <div class="sort-radio"></div>
-                                <div class="sort-label">Цена по убыванию</div>
+                                <input type="radio" name="sort" value="price_desc" id="sort1" hidden>
+                                <label for="sort1" class="sort-label">Цена по убыванию</label>
                             </div>
                             <div class="sort-option" onclick="selectSort(this)">
                                 <div class="sort-radio"></div>
-                                <div class="sort-label">Цена по возрастанию</div>
+                                <input type="radio" name="sort" value="price_asc" id="sort2" hidden>
+                                <label for="sort2" class="sort-label">Цена по возрастанию</label>
                             </div>
                             <div class="sort-option" onclick="selectSort(this)">
                                 <div class="sort-radio"></div>
-                                <div class="sort-label">По популярности</div>
+                                <input type="radio" name="sort" value="popular" id="sort3" hidden>
+                                <label for="sort3" class="sort-label">По популярности</label>
                             </div>
                             <div class="sort-option" onclick="selectSort(this)">
                                 <div class="sort-radio"></div>
-                                <div class="sort-label">Новинки</div>
+                                <input type="radio" name="sort" value="new" id="sort4" hidden>
+                                <label for="sort4" class="sort-label">Новинки</label>
                             </div>
                         </div>
                     </div>
@@ -533,47 +536,61 @@
                         <div class="color-grid">
                             <div class="color_block" onclick="toggleColor(this)">
                                 <div class="color-option black"></div>
+                                <input type="checkbox" name="color[]" value="black" hidden>
                             </div>
                             <div class="color_block" onclick="toggleColor(this)">
-                                <div class="color-option navy" onclick="toggleColor(this)"></div>
+                                <div class="color-option navy"></div>
+                                <input type="checkbox" name="color[]" value="navy" hidden>
                             </div>
                             <div class="color_block" onclick="toggleColor(this)">
-                                <div class="color-option blue" onclick="toggleColor(this)"></div>
+                                <div class="color-option blue"></div>
+                                <input type="checkbox" name="color[]" value="blue" hidden>
                             </div>
                             <div class="color_block" onclick="toggleColor(this)">
-                                <div class="color-option light-gray" onclick="toggleColor(this)"></div>
+                                <div class="color-option light-gray"></div>
+                                <input type="checkbox" name="color[]" value="light-gray" hidden>
                             </div>
                             <div class="color_block" onclick="toggleColor(this)">
-                                <div class="color-option red" onclick="toggleColor(this)"></div>
+                                <div class="color-option red"></div>
+                                <input type="checkbox" name="color[]" value="red" hidden>
                             </div>
                             <div class="color_block" onclick="toggleColor(this)">
-                                <div class="color-option green" onclick="toggleColor(this)"></div>
+                                <div class="color-option green"></div>
+                                <input type="checkbox" name="color[]" value="green" hidden>
                             </div>
                             <div class="color_block" onclick="toggleColor(this)">
-                                <div class="color-option beige" onclick="toggleColor(this)"></div>
+                                <div class="color-option beige"></div>
+                                <input type="checkbox" name="color[]" value="beige" hidden>
                             </div>
                         </div>
                         <div class="color-grid">
                             <div class="color_block" onclick="toggleColor(this)">
                                 <div class="color-option black"></div>
+                                <input type="checkbox" name="color[]" value="black" hidden>
                             </div>
                             <div class="color_block" onclick="toggleColor(this)">
-                                <div class="color-option navy" onclick="toggleColor(this)"></div>
+                                <div class="color-option navy"></div>
+                                <input type="checkbox" name="color[]" value="navy" hidden>
                             </div>
                             <div class="color_block" onclick="toggleColor(this)">
-                                <div class="color-option blue" onclick="toggleColor(this)"></div>
+                                <div class="color-option blue"></div>
+                                <input type="checkbox" name="color[]" value="blue" hidden>
                             </div>
                             <div class="color_block" onclick="toggleColor(this)">
-                                <div class="color-option light-gray" onclick="toggleColor(this)"></div>
+                                <div class="color-option light-gray"></div>
+                                <input type="checkbox" name="color[]" value="light-gray" hidden>
                             </div>
                             <div class="color_block" onclick="toggleColor(this)">
-                                <div class="color-option red" onclick="toggleColor(this)"></div>
+                                <div class="color-option red"></div>
+                                <input type="checkbox" name="color[]" value="red" hidden>
                             </div>
                             <div class="color_block" onclick="toggleColor(this)">
-                                <div class="color-option green" onclick="toggleColor(this)"></div>
+                                <div class="color-option green"></div>
+                                <input type="checkbox" name="color[]" value="green" hidden>
                             </div>
                             <div class="color_block" onclick="toggleColor(this)">
-                                <div class="color-option beige" onclick="toggleColor(this)"></div>
+                                <div class="color-option beige"></div>
+                                <input type="checkbox" name="color[]" value="beige" hidden>
                             </div>
                         </div>
                     </div>
@@ -585,18 +602,22 @@
                             <div class="checkbox-options">
                                 <div class="checkbox-option" onclick="toggleCheckbox(this)">
                                     <div class="checkbox-input"></div>
+                                    <input type="checkbox" name="material[]" value="leather" hidden>
                                     <div class="checkbox-label">Кожа</div>
                                 </div>
                                 <div class="checkbox-option" onclick="toggleCheckbox(this)">
                                     <div class="checkbox-input"></div>
+                                    <input type="checkbox" name="material[]" value="suede" hidden>
                                     <div class="checkbox-label">Замша</div>
                                 </div>
                                 <div class="checkbox-option" onclick="toggleCheckbox(this)">
                                     <div class="checkbox-input"></div>
+                                    <input type="checkbox" name="material[]" value="fabric" hidden>
                                     <div class="checkbox-label">Ткань</div>
                                 </div>
                                 <div class="checkbox-option" onclick="toggleCheckbox(this)">
                                     <div class="checkbox-input"></div>
+                                    <input type="checkbox" name="material[]" value="fabric2" hidden>
                                     <div class="checkbox-label">Ткань</div>
                                 </div>
                             </div>
@@ -608,14 +629,17 @@
                             <div class="checkbox-options">
                                 <div class="checkbox-option" onclick="toggleCheckbox(this)">
                                     <div class="checkbox-input"></div>
+                                    <input type="checkbox" name="model[]" value="classic" hidden>
                                     <div class="checkbox-label">Классическая</div>
                                 </div>
                                 <div class="checkbox-option" onclick="toggleCheckbox(this)">
                                     <div class="checkbox-input"></div>
+                                    <input type="checkbox" name="model[]" value="sport" hidden>
                                     <div class="checkbox-label">Спортивная</div>
                                 </div>
                                 <div class="checkbox-option" onclick="toggleCheckbox(this)">
                                     <div class="checkbox-input"></div>
+                                    <input type="checkbox" name="model[]" value="business" hidden>
                                     <div class="checkbox-label">Деловая</div>
                                 </div>
                             </div>
@@ -628,20 +652,21 @@
                         <div class="checkbox-options">
                             <div class="checkbox-option" onclick="toggleCheckbox(this)">
                                 <div class="checkbox-input"></div>
+                                <input type="checkbox" name="size[]" value="40-42" hidden>
                                 <div class="checkbox-label">40–42</div>
                             </div>
+                          
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="filter-footer">
-                <button class="filter-apply-btn" id="filterApplyBtn" disabled onclick="applyFilters()">
+                <button type="submit" class="filter-apply-btn" id="filterApplyBtn" disabled>
                     ПОКАЗАТЬ
                 </button>
             </div>
-        </div>
-
+        </form>
 
         <!-- Hero Slider -->
         <section class="hero-slider">
@@ -1871,16 +1896,17 @@
                     <form id="smbSubscribeForm">
                         <div class="smb-form-group">
                             <label for="smbEmail">E-MAIL*</label>
-                            <input type="email" id="smbEmail" name="email" placeholder="Введите e-mail" required>
+                            <input requiredtype="email" id="smbEmail" name="email" placeholder="Введите e-mail"
+                                required>
                         </div>
                         <div class="smb-checkbox-group">
                             <div class="smb-checkbox-item">
-                                <input type="checkbox" id="smbPrivacy" name="privacy" required>
+                                <input requiredtype="checkbox" id="smbPrivacy" name="privacy" required>
                                 <label for="smbPrivacy" class="input_label">Я согласен(-на) с <a href="#">Политикой
                                         конфиденциальности</a></label>
                             </div>
                             <div class="smb-checkbox-item">
-                                <input type="checkbox" id="smbNewsletter" name="newsletter">
+                                <input requiredtype="checkbox" id="smbNewsletter" name="newsletter">
                                 <label for="smbNewsletter" class="input_label">Я согласен(-на) на получение
                                     информационной
                                     <br> рассылки</label>

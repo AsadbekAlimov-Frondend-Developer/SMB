@@ -538,9 +538,11 @@ function selectSort(element) {
 
   // Add active class to selected option
   const radio = element.querySelector(".sort-radio");
+  const radioInput = element.querySelector('input[type="radio"]'); // ← Bu bor edi
   const label = element.querySelector(".sort-label");
 
   if (radio) radio.classList.add("active");
+  if (radioInput) radioInput.checked = true; // ← FAQAT BU QATORNI QO'SHING
   if (label) selectedFilters.sort = label.textContent;
 
   updateApplyButton();
@@ -549,12 +551,27 @@ function selectSort(element) {
 function toggleColor(element) {
   if (!element) return;
 
+  // color_block active bo'ladi
   element.classList.toggle("active");
+  
+  // Ichidagi color-option ham active bo'ladi
+  const colorOption = element.querySelector(".color-option");
+  if (colorOption) {
+    colorOption.classList.toggle("active");
+  }
+  
+  // Checkbox ni belgilash
+  const checkbox = element.querySelector('input[type="checkbox"]');
+  if (checkbox) {
+    checkbox.checked = element.classList.contains("active");
+  }
 
-  const colorClass = Array.from(element.classList).find(
+  // Rang classini topish
+  const colorClass = Array.from(colorOption.classList).find(
     (cls) => cls !== "color-option" && cls !== "active"
   );
 
+  // selectedFilters ni yangilash
   if (element.classList.contains("active")) {
     if (colorClass && !selectedFilters.colors.includes(colorClass)) {
       selectedFilters.colors.push(colorClass);
@@ -572,13 +589,18 @@ function toggleCheckbox(element) {
   if (!element) return;
 
   const checkbox = element.querySelector(".checkbox-input");
+  const checkboxInput = element.querySelector('input[type="checkbox"]');
   const labelElement = element.querySelector(".checkbox-label");
   const parent = element.closest(".filter-group");
   const groupTitleElement = parent?.querySelector(".filter-group-title");
 
   if (!checkbox || !labelElement || !groupTitleElement) return;
 
+  // Visual checkbox va real input ni toggle qilish
   checkbox.classList.toggle("active");
+  if (checkboxInput) {
+    checkboxInput.checked = checkbox.classList.contains("active");
+  }
 
   const label = labelElement.textContent;
   const groupTitle = groupTitleElement.textContent;
@@ -628,7 +650,7 @@ function updateApplyButton() {
     applyBtn.textContent = `ПОКАЗАТЬ (${totalSelected})`;
   } else {
     applyBtn.disabled = true;
-    applyBtn.textContent = "ПОКАЗАТЬ (1)";
+    applyBtn.textContent = "ПОКАЗАТЬ (0)";
   }
 }
 

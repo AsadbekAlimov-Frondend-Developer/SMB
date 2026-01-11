@@ -18,6 +18,7 @@
 
 
     <link rel="stylesheet" href="assets/styles/index.css">
+    <link rel="stylesheet" href="assets/styles/edits.css">
 </head>
 
 <body>
@@ -472,7 +473,7 @@
                     <a href="blog.html" class="active">оформление заказа</a>
 
                 </div>
-                <div class="checkout_block">
+                <form class="checkout_block">
                     <div class="checkout-form">
                         <!-- Секция 1: Данные получателя -->
                         <div class="section">
@@ -504,8 +505,8 @@
                                 <div class="form-group">
                                     <label class="form-label">ТЕЛЕФОН*</label>
                                     <input type="tel" class="form-input" id="phone" placeholder="+7(999)000-00-00"
-                                        inputmode="numeric" pattern="[0-9]*"
-                                        oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+                                        inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                                        required>
 
                                 </div>
                                 <div class="form-group">
@@ -552,9 +553,16 @@
                                 <div class="form-group">
                                     <label class="form-label mb-2">ТИП ДОСТАВКИ*</label>
                                     <div class="delivery-options">
-                                        <button type="button" class="delivery-btn active"
-                                            data-type="courier">КУРЬЕР</button>
-                                        <button type="button" class="delivery-btn" data-type="pickup">САМОВЫВОЗ</button>
+                                        <input type="radio" class="form-input" id="deliveryCourier" name="deliveryType"
+                                            style="display: none;" checked>
+                                        <label for="deliveryCourier" class="delivery-btn active"
+                                            data-type="courier">КУРЬЕР</label>
+
+                                        <input type="radio" class="form-input" id="deliveryPickup" name="deliveryType"
+                                            style="display: none;">
+                                        <label for="deliveryPickup" class="delivery-btn"
+                                            data-type="pickup">САМОВЫВОЗ</label>
+
                                     </div>
                                 </div>
 
@@ -888,17 +896,52 @@
                                 </div>
                                 <div class="toggle-fields" id="giftCardFields">
                                     <div class="form-row">
-                                        <div class="form-group">
-                                            <input type="text" class="form-input" id="giftCardNumber"
-                                                placeholder="123456789000" inputmode="numeric" pattern="[0-9]*"
-                                                oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-
+                                        <div class="form-group gift-card-dropdown-wrapper">
+                                            <div class="gift-card-dropdown-selected" id="giftCardDropdownSelected">
+                                                Выберите подарочную карту
+                                            </div>
+                                            <div class="gift-card-dropdown-menu" id="giftCardDropdownMenu">
+                                                <div class="gift-card-dropdown-item" data-number="1234567899000"
+                                                    data-balance="5000" data-expiry="12.12.2025" data-type="balance">
+                                                    <div class="gift-card-number">1234567899000</div>
+                                                    <div class="gift-card-info">
+                                                        <span>Баланс карты: 5000₽</span>
+                                                        <span>Срок действия: 12.12.2025</span>
+                                                    </div>
+                                                </div>
+                                                <div class="gift-card-dropdown-item" data-number="1234567899000"
+                                                    data-balance="300" data-expiry="12.12.2025" data-type="остаток">
+                                                    <div class="gift-card-number">1234567899000</div>
+                                                    <div class="gift-card-info">
+                                                        <span>Остаток: 300₽</span>
+                                                        <span>Срок действия: 12.12.2025</span>
+                                                    </div>
+                                                </div>
+                                                <div class="gift-card-dropdown-item" data-number="1234567889000"
+                                                    data-balance="5000" data-expiry="05.05.2025" data-type="номинал">
+                                                    <div class="gift-card-number">1234567889000</div>
+                                                    <div class="gift-card-info">
+                                                        <span>Номинал: 5000₽</span>
+                                                        <span>Срок действия истек: 05.05.2025</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-input" id="giftCardAmount"
-                                                placeholder="5000₽" inputmode="numeric" pattern="[0-9]*"
-                                                oninput="this.value = this.value.replace(/[^0-9]/g, '')">
 
+                                        <div class="form-group gift-card-amount-wrapper" id="giftCardAmountWrapper"
+                                            style="display: none;">
+                                            <input type="text" class="form-input gift-card-amount-input"
+                                                id="giftCardAmount" placeholder="Введите сумму для списания"
+                                                inputmode="numeric" pattern="[0-9]*">
+                                            <button class="gift-card-apply-btn" id="giftCardApplyBtn"
+                                                style="display: none;">ПРИМЕНИТЬ</button>
+                                            <div class="gift-card-static-info" id="giftCardStaticInfo"
+                                                style="display: none;">
+                                                <span class="gift-card-available">Доступна сумма: <span
+                                                        id="availableAmount">0₽</span></span>
+                                                <span class="gift-card-expiry">Срок действия: <span
+                                                        id="expiryDate">00.00.0000</span></span>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -908,7 +951,7 @@
                             <!-- Бонусы -->
                             <div class="toggle-section">
                                 <div class="toggle-wrapper mb-0">
-                                    <div class="toggle" id="bonusToggle">
+                                    <div onclick="toggleBonusFields()" class="toggle" id="bonusToggle">
                                         <div class="toggle-slider"></div>
                                     </div>
                                     <span>БОНУСЫ</span>
@@ -940,6 +983,83 @@
                                             </svg>
 
                                         </div>
+                                    </div>
+                                </div>
+                                <!-- === modal -->
+                                <div id="bonusModal" class="bonus-modal-overlay" onclick="closeBonusModal(event)">
+                                    <div class="bonus-modal-container" onclick="event.stopPropagation()">
+                                        <div class="bonus-modal-header">
+                                            БОНУСНАЯ КАРТА
+                                            <span class="bonus-modal-close" onclick="closeBonusModal()"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none">
+                                                    <mask id="mask0_870_56867" style="mask-type:alpha"
+                                                        maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                        <rect width="24" height="24" fill="#D9D9D9" />
+                                                    </mask>
+                                                    <g mask="url(#mask0_870_56867)">
+                                                        <path
+                                                            d="M6.40001 18.3108L5.69226 17.6031L11.2923 12.0031L5.69226 6.40306L6.40001 5.69531L12 11.2953L17.6 5.69531L18.3078 6.40306L12.7078 12.0031L18.3078 17.6031L17.6 18.3108L12 12.7108L6.40001 18.3108Z"
+                                                            fill="#1C1B1F" />
+                                                    </g>
+                                                </svg></span>
+                                        </div>
+
+                                        <div class="bonus-modal-card">
+                                            <div>
+                                                <div class="bonus-modal-card-label">ВАШИ БОНУСЫ</div>
+                                                <div class="bonus-modal-card-points">1 500</div>
+                                            </div>
+                                            <div class="bonus-modal-card-name">SMB</div>
+                                        </div>
+
+                                        <div class="bonus-modal-input-wrapper">
+                                            <input type="text" class="bonus-modal-input" id="bonusInput"
+                                                placeholder="Введите сумму для списания" oninput="validateBonusInput()">
+                                            <div class="bonus-modal-input-icons" id="bonusIcons" style="display: none;">
+                                                <span class="bonus-modal-icon bonus-modal-icon-clear"
+                                                    onclick="clearBonusInput()"><svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <mask id="mask0_4002_33558" style="mask-type:alpha"
+                                                            maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                                                            height="24">
+                                                            <rect width="24" height="24" fill="#D9D9D9" />
+                                                        </mask>
+                                                        <g mask="url(#mask0_4002_33558)">
+                                                            <path
+                                                                d="M6.40001 18.3108L5.69226 17.6031L11.2923 12.0031L5.69226 6.40306L6.40001 5.69531L12 11.2953L17.6 5.69531L18.3078 6.40306L12.7078 12.0031L18.3078 17.6031L17.6 18.3108L12 12.7108L6.40001 18.3108Z"
+                                                                fill="#1C1B1F" />
+                                                        </g>
+                                                    </svg></span>
+                                                <span class="bonus-modal-icon bonus-modal-icon-check"><svg width="24"
+                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <rect x="24" y="24" width="24" height="24" rx="12"
+                                                            transform="rotate(-180 24 24)" fill="#91BE17" />
+                                                        <mask id="mask0_4002_33561" style="mask-type:alpha"
+                                                            maskUnits="userSpaceOnUse" x="5" y="5" width="14"
+                                                            height="14">
+                                                            <rect x="5" y="5" width="14" height="14" fill="#D9D9D9" />
+                                                        </mask>
+                                                        <g mask="url(#mask0_4002_33561)">
+                                                            <path
+                                                                d="M10.5717 15.499L7.2467 12.174L8.07795 11.3427L10.5717 13.8365L15.9238 8.48438L16.755 9.31563L10.5717 15.499Z"
+                                                                fill="white" />
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="bonus-modal-error-text" id="bonusError" style="display: none;">
+                                            Недостаточно средств для списания
+                                        </div>
+
+                                        <a class="bonus-modal-link" href="#" onclick="return false;">Узнать
+                                            подробнее</a>
+
+                                        <button class="bonus-modal-button" disabled
+                                            id="bonusApplyBtn">ПРИМЕНИТЬ</button>
                                     </div>
                                 </div>
                             </div>
@@ -1010,10 +1130,10 @@
                                 </div>
                             </div>
 
-                            <button type="button" class="checkout-btn" id="checkoutBtn">ОПЛАТИТЬ ЗАКАЗ</button>
+                            <button type="submit" class="checkout-btn" id="checkoutBtn">ОПЛАТИТЬ ЗАКАЗ</button>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
 
             <!-- Popup для промокода -->
@@ -1455,6 +1575,7 @@
 
     <script src="script.js"></script>
 
+    <script src="edits.js"></script>
     <script>
 
     </script>
